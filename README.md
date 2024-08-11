@@ -367,4 +367,199 @@ b. \( y^x = x \log y \)
    \[
    \frac{dy}{dx} = \frac{y}{x} - \frac{y \log y}{\log x} = \frac{\log y}{\log x} 
    \]
-```
+   
+---
+
+## Example 2: 
+**Find** \(\frac{dy}{dx}\) **when** \(x^y = \sin x\).
+
+**Solution:**
+
+Taking \(\log_e f(x, y) = x^y \ln y - \ln \sin x = 0\)
+
+\[
+(1) \quad \text{Put } x \to x, y \to \ln y \text{ in } \ln x
+\]
+
+Differentiating (2) w.r.t. x and y, we get:
+
+\[
+\frac{1}{x} \ln y \cdot \frac{dy}{dx} - \frac{1}{\sin x} \cdot \cos x
+\]
+
+Using result (3):
+
+\[
+\frac{d}{dx} \ln x = \frac{1}{x}
+\]
+
+\[
+\Rightarrow \frac{1}{\sin x} - \cot x
+\]
+
+Using result (4):
+
+\[
+f_y = x^n \ln x \cdot \frac{y}{y}
+\]
+
+Substituting (5) and (6) in:
+
+\[
+\frac{dy}{dx} = - \frac{(y \cdot \ln y - \cot x)}{x \ln x} \cdot \frac{y}{y}
+\]
+
+---
+
+## Example 3:
+**Find** \(\frac{d^2y}{dx^2}\) **if** \(x^5 + y^5 = 5a^2x^2\).
+
+**Solution:**
+
+Let \(f(x, y) = x^5 + y^5 - 5a^2x^2 = 0\).
+
+Differentiating \(f\) w.r.t. x, we get:
+
+\[
+f_x = 5x^4 - 10a^2x, \quad f_y = 0
+\]
+
+\[
+f_{xx} = 20x^3 - 10a^2, \quad f_{yy} = 20y^3
+\]
+
+Substituting these values in:
+
+\[
+\frac{d^2y}{dx^2} = - \frac{f_{xx}f_y^2 - 2f_yf_xf_{xy} + f_xf_yf_{yy}^2}{f_x^2 + f_yf_{yy}^2}
+\]
+
+\[
+= \frac{20x^3 \cdot 10a^2}{5y^5}
+\]
+
+\[
+= \frac{125y^2}{y^2 - 4a^2x^3 + 4a^6x^2}
+\]
+
+---
+
+## Example 4:
+**Compute** \(\frac{\partial z}{\partial x}\) **and** \(\frac{\partial z}{\partial y}\) **if** \(x^2 + y^2 + z^2 = a^2\).
+
+**Solution:**
+
+\(f(x, y, z) = x^2 + y^2 + z^2 - a^2 = 0\).
+
+Differentiating \(f\) partially w.r.t. \(x\):
+
+\[
+\frac{\partial f}{\partial x} = 2x + \frac{\partial z}{\partial x} \cdot \frac{\partial f}{\partial z} = 0
+\]
+
+Differentiating w.r.t. \(y\):
+
+\[
+\frac{\partial z}{\partial y} \cdot \frac{\partial f}{\partial z} = -2x
+\]
+
+---
+
+## Example 5:
+**If** \(xy^3 - yx^3 = 6\) **is the equation of a curve, find the slope and the equation of the tangent line at the point** \((1, 2)\).
+
+**Solution:**
+
+Differentiating \(xy^3 - yx^3 = 6\) implicitly w.r.t. \(x\), we get:
+
+\[
+y^3 + 3xy^2 \frac{dy}{dx} - 3x^2y - yx^3 = 0
+\]
+
+At \((x = 1, y = 2)\):
+
+\[
+8 + 12 \frac{dy}{dx} - 6 = 0
+\]
+
+The slope at \((1, 2)\) is:
+
+\[
+\frac{dy}{dx} = \frac{2}{11}
+\]
+
+The equation of the tangent line at \((1, 2)\) is:
+
+\[
+\frac{y - 2}{x - 1} = \frac{2}{11}
+\]
+
+Or:
+
+\[
+2x + 11y - 24 = 0
+\]
+
+---
+
+## Exercise:
+
+**Find the derivative** \(\frac{dy}{dx}\) **from the given implicit function** \(f(x, y) = c\). 
+
+Hint: Use \(\frac{dy}{dx} = -\frac{f_x}{f_y}\).
+
+1. \(x^3 + y^3 = 3a^2\)
+
+   Ans. \(\frac{dy}{dx} = -\frac{x^2}{y^2}\)
+
+2. \((\cos y)^x = (\sin y)^x\)
+
+   Ans. \(x \sin x \cdot \frac{dy}{dx} = (\cos x)\)
+
+3. \(\sin y(x \sin x - \cos x \ln y) = \sin y\)
+
+   Ans. \(\sin(x \sin y + x^2y - \cos x)\)
+
+4. \(x^2 + 2xy + b^2 = 0\)
+
+   Ans. \(y(x - b) = -2b\)
+
+5. \(ax^2 + by^2 + c = 0\)
+
+   Ans. \(\frac{dy}{dx} = -\frac{ax}{by}\)
+
+6. Find \(\frac{d^2y}{dx^2}\) from the implicit function \(f(x, y) = c\):
+
+   \(y^4 + x^4 + 4a^2xy\)
+
+   Ans. \(\frac{d^2y}{dx^2} = -\frac{d^2}{dx^2}\)
+
+7. \(a x^2 + 2hy + b^2 + 2fy + c = 0\)
+
+   Ans. \(\frac{d^2y}{dx^2} = \frac{d}{dx^2}\)
+
+8. \(x + \sqrt{1 - x^2 + \sqrt{1 - x^2}} = a\)
+
+   Ans. \(\frac{dy}{dx} = \frac{\partial z}{\partial x}\)
+
+9. Find \(\frac{dy}{dx}\) and \(\frac{dy}{dy}\) if \(\ln x + y \ln x = x\).
+
+10. Find \(\frac{\partial u}{\partial x}\) and \(\frac{\partial u}{\partial y}\) if \(u = \ln xy\) and \(x^3 + y^3 + 3xy - 1 = 0\).
+
+11. \(\ln(x^2 + 3x) + 3y = 0\), prove that \(\frac{\partial^2 u}{\partial x^2}\) and \(\frac{\partial^2 u}{\partial y^2}\):
+
+   \[
+   \frac{\partial^2 u}{\partial x^2} = 2(x - 1) - \frac{\partial^2 u}{\partial y^2}(x^2 + 3y^2)
+   \]
+
+12. Find \(\frac{\partial u}{\partial x}\) and \(\frac{\partial u}{\partial y}\) if \(u = f(x + u, y)\).
+
+13. If \(xy = \sin x\), find \(\frac{\partial x}{\partial y}\) and \(\frac{\partial y}{\partial x}\) at \((0, 0)\).
+
+14. If \(x^2 + y^2 = 1\), find \(\frac{\partial x}{\partial y}\).
+
+15. Find \(\frac{\partial x}{\partial y}\) and \(\frac{\partial y}{\partial x}\) at \((0, 1, 2)\).
+
+16. For the curve \(x e^x + y e^y = 0\), find the equation of the tangent line at the origin.
+
+---
